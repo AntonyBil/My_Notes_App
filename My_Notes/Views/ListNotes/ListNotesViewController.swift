@@ -50,13 +50,13 @@ class ListNotesViewController: UIViewController {
     
     func goToEditNote(_ note: Note) {
         let controller = storyboard?.instantiateViewController(withIdentifier: EditNoteViewController.identifire) as! EditNoteViewController
-      //  controller.note = note
-       // controller.delegate = self
+        controller.note = note
+        controller.delegate = self
         navigationController?.pushViewController(controller, animated: true)
     }
     
     @IBAction func createNewNoteClicked(_ sender: UIButton) {
-        
+        goToEditNote(createNote())
     }
     
     func createNote() -> Note {
