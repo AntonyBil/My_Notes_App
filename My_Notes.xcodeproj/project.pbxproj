@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15E2F17F2A325455000981E8 /* EditNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E2F17E2A325455000981E8 /* EditNoteViewController.swift */; };
 		15E51C672A2FD4A1008D1A38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E51C662A2FD4A1008D1A38 /* AppDelegate.swift */; };
 		15E51C692A2FD4A1008D1A38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E51C682A2FD4A1008D1A38 /* SceneDelegate.swift */; };
 		15E51C6E2A2FD4A1008D1A38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15E51C6C2A2FD4A1008D1A38 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15E2F17E2A325455000981E8 /* EditNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteViewController.swift; sourceTree = "<group>"; };
 		15E51C632A2FD4A1008D1A38 /* My_Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = My_Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15E51C662A2FD4A1008D1A38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15E51C682A2FD4A1008D1A38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		15E51C802A2FD639008D1A38 /* EditNote */ = {
 			isa = PBXGroup;
 			children = (
+				15E2F17E2A325455000981E8 /* EditNoteViewController.swift */,
 			);
 			path = EditNote;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				15E51C672A2FD4A1008D1A38 /* AppDelegate.swift in Sources */,
 				15E51C832A2FD68F008D1A38 /* Date+Extansion.swift in Sources */,
 				15E51C692A2FD4A1008D1A38 /* SceneDelegate.swift in Sources */,
+				15E2F17F2A325455000981E8 /* EditNoteViewController.swift in Sources */,
 				15E51C892A2FD952008D1A38 /* ListNoteTableViewCell.swift in Sources */,
 				15E51C8B2A2FD9D2008D1A38 /* ListNotesViewController.swift in Sources */,
 				15E51C7D2A2FD5F6008D1A38 /* Note.swift in Sources */,
