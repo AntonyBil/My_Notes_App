@@ -1,17 +1,16 @@
 //
-//  Note.swift
+//  Note+CoreDataClass.swift
 //  My_Notes
 //
-//  Created by apple on 07.06.2023.
+//  Created by apple on 10.06.2023.
+//
 //
 
 import Foundation
+import CoreData
 
-class Note {
-    let id = UUID()
-    var text: String = ""
-    var lastUpdated: Date = Date()
-    
+@objc(Note)
+public class Note: NSManagedObject {
     var title: String {
         return text.trimmingCharacters(in: .whitespacesAndNewlines).components(separatedBy: .newlines).first ?? "" // returns the first line of the text
     }

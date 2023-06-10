@@ -42,8 +42,7 @@ class EditNoteViewController: UIViewController {
     func deleteNote() {
         //delete the note from database
         print("Delete note")
-        
-        delegate?.deleteNote(with: note.id)
+            delegate?.deleteNote(with: note.id)
     }
     
 }

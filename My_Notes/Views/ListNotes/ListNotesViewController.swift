@@ -60,10 +60,7 @@ class ListNotesViewController: UIViewController {
     }
     
     func createNote() -> Note {
-        let note = Note()
-        
-        //TODO Save note in database
-        
+        let note = CoreDataManager.shered.createNote()
         // Update table
         allNotes.insert(note, at: 0)
         tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)

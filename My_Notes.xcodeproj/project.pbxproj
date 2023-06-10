@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		15E2F17F2A325455000981E8 /* EditNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E2F17E2A325455000981E8 /* EditNoteViewController.swift */; };
+		15E2F1822A34C461000981E8 /* MyNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15E2F1802A34C461000981E8 /* MyNotes.xcdatamodeld */; };
+		15E2F1852A34C6DB000981E8 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E2F1832A34C6DB000981E8 /* Note+CoreDataClass.swift */; };
+		15E2F1862A34C6DB000981E8 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E2F1842A34C6DB000981E8 /* Note+CoreDataProperties.swift */; };
+		15E2F1882A34CC7A000981E8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E2F1872A34CC7A000981E8 /* CoreDataManager.swift */; };
 		15E51C672A2FD4A1008D1A38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E51C662A2FD4A1008D1A38 /* AppDelegate.swift */; };
 		15E51C692A2FD4A1008D1A38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E51C682A2FD4A1008D1A38 /* SceneDelegate.swift */; };
 		15E51C6E2A2FD4A1008D1A38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15E51C6C2A2FD4A1008D1A38 /* Main.storyboard */; };
 		15E51C702A2FD4A2008D1A38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15E51C6F2A2FD4A2008D1A38 /* Assets.xcassets */; };
 		15E51C732A2FD4A2008D1A38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15E51C712A2FD4A2008D1A38 /* LaunchScreen.storyboard */; };
-		15E51C7D2A2FD5F6008D1A38 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E51C7C2A2FD5F6008D1A38 /* Note.swift */; };
 		15E51C832A2FD68F008D1A38 /* Date+Extansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E51C822A2FD68F008D1A38 /* Date+Extansion.swift */; };
 		15E51C892A2FD952008D1A38 /* ListNoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E51C882A2FD952008D1A38 /* ListNoteTableViewCell.swift */; };
 		15E51C8B2A2FD9D2008D1A38 /* ListNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E51C8A2A2FD9D2008D1A38 /* ListNotesViewController.swift */; };
@@ -21,6 +24,10 @@
 
 /* Begin PBXFileReference section */
 		15E2F17E2A325455000981E8 /* EditNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteViewController.swift; sourceTree = "<group>"; };
+		15E2F1812A34C461000981E8 /* MyNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyNotes.xcdatamodel; sourceTree = "<group>"; };
+		15E2F1832A34C6DB000981E8 /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
+		15E2F1842A34C6DB000981E8 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		15E2F1872A34CC7A000981E8 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		15E51C632A2FD4A1008D1A38 /* My_Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = My_Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15E51C662A2FD4A1008D1A38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15E51C682A2FD4A1008D1A38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,7 +35,6 @@
 		15E51C6F2A2FD4A2008D1A38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15E51C722A2FD4A2008D1A38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15E51C742A2FD4A2008D1A38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		15E51C7C2A2FD5F6008D1A38 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		15E51C822A2FD68F008D1A38 /* Date+Extansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extansion.swift"; sourceTree = "<group>"; };
 		15E51C882A2FD952008D1A38 /* ListNoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNoteTableViewCell.swift; sourceTree = "<group>"; };
 		15E51C8A2A2FD9D2008D1A38 /* ListNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNotesViewController.swift; sourceTree = "<group>"; };
@@ -88,7 +94,10 @@
 		15E51C7B2A2FD5D2008D1A38 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				15E51C7C2A2FD5F6008D1A38 /* Note.swift */,
+				15E2F1832A34C6DB000981E8 /* Note+CoreDataClass.swift */,
+				15E2F1842A34C6DB000981E8 /* Note+CoreDataProperties.swift */,
+				15E2F1802A34C461000981E8 /* MyNotes.xcdatamodeld */,
+				15E2F1872A34CC7A000981E8 /* CoreDataManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -201,10 +210,13 @@
 				15E51C672A2FD4A1008D1A38 /* AppDelegate.swift in Sources */,
 				15E51C832A2FD68F008D1A38 /* Date+Extansion.swift in Sources */,
 				15E51C692A2FD4A1008D1A38 /* SceneDelegate.swift in Sources */,
+				15E2F1822A34C461000981E8 /* MyNotes.xcdatamodeld in Sources */,
 				15E2F17F2A325455000981E8 /* EditNoteViewController.swift in Sources */,
+				15E2F1852A34C6DB000981E8 /* Note+CoreDataClass.swift in Sources */,
 				15E51C892A2FD952008D1A38 /* ListNoteTableViewCell.swift in Sources */,
 				15E51C8B2A2FD9D2008D1A38 /* ListNotesViewController.swift in Sources */,
-				15E51C7D2A2FD5F6008D1A38 /* Note.swift in Sources */,
+				15E2F1882A34CC7A000981E8 /* CoreDataManager.swift in Sources */,
+				15E2F1862A34C6DB000981E8 /* Note+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +432,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		15E2F1802A34C461000981E8 /* MyNotes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				15E2F1812A34C461000981E8 /* MyNotes.xcdatamodel */,
+			);
+			currentVersion = 15E2F1812A34C461000981E8 /* MyNotes.xcdatamodel */;
+			path = MyNotes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 15E51C5B2A2FD4A1008D1A38 /* Project object */;
 }
