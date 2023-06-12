@@ -33,6 +33,7 @@ class ListNotesViewController: UIViewController {
         navigationController?.navigationBar.shadowImage = UIImage()
         tableView.contentInset = .init(top: 0, left: 0, bottom: 30, right: 0)
         configureSearchBar()
+        featchNotesFromStorage()
        
     }
     
@@ -69,21 +70,17 @@ class ListNotesViewController: UIViewController {
     }
     
     func featchNotesFromStorage() {
-        //TODO Get all saved notes
-        print("Featching all notes")
+       allNotes = CoreDataManager.shered.fetchNotes()
     }
     
     func deleteNoteFromStorege(_ note: Note) {
-        //TODO Delete the note
-        print("Deleting note")
-        
-        //Update the list
         deleteNote(with: note.id)
+        CoreDataManager.shered.deleteNote(note)
     }
     
     func searchNotesFromStorage(_ text: String) {
-        //TODO get all notes that have this text
-        print("Searching Notes")
+        allNotes = CoreDataManager.shered.fetchNotes(filter: text)
+        tableView.reloadData()
     }
 
 }

@@ -44,6 +44,7 @@ class CoreDataManager {
 //MARK: - Helper functions
 
 extension CoreDataManager {
+    
     func createNote() -> Note {
         let note = Note(context: viewContext)
         note.id = UUID()
@@ -51,5 +52,23 @@ extension CoreDataManager {
         note.lastUpdated = Date()
         save()
         return note
+    }
+    
+    func fetchNotes(filter: String? = nil) -> [Note] {
+        let request: NSFetchRequest<Note> = Note.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(keyPath: \Note.lastUpdated, ascending: false)
+        request.sortDescriptors = [sortDescriptor]
+        
+        if let filter = filter {
+            let predicate = NSPredicate(format: "text contains[sd] %@", filter)
+            request.predicate = predicate
+        }
+        
+        return (try? viewContext.fetch(request)) ?? []
+    }
+    
+    func deleteNote(_ note: Note) {
+        viewContext.delete(note)
+        save()
     }
 }
