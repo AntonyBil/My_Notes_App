@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import CoreData
+
 protocol ListNotesDelegate: AnyObject {
     func refreshNoes()
     func deleteNote(with id: UUID)
@@ -18,14 +20,9 @@ class ListNotesViewController: UIViewController {
     
     private let searchController = UISearchController()
     
-    var allNotes: [Note] = [] {
-        didSet{
-            notesCountLbl.text = "\(allNotes.count) \(allNotes.count == 1 ? "Note" : "Notes")"
-            filteredNotes = allNotes
-        }
-    }
+
     
-    var filteredNotes: [Note] = []
+    var fetchedResultsController: NSFetchedResultsController<Note>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +32,17 @@ class ListNotesViewController: UIViewController {
         configureSearchBar()
         featchNotesFromStorage()
        
+    }
+    
+    func refreshCountLbl() {
+        notesCountLbl.text = "\(allNotes.count) \(allNotes.count == 1 ? "Note" : "Notes")"
+        filteredNotes = allNotes
+    }
+    
+    func setupFetchResultsController() {
+        fetchedResultsController = CoreDataManager.shered.createNotesFetchResultsController()
+        fetchedResultsController.delegate = self
+        try? fetchedResultsController.performFetch()
     }
     
     func indexForNote(id: UUID, in list: [Note]) -> IndexPath {
@@ -157,4 +165,9 @@ extension ListNotesViewController: ListNotesDelegate {
         //just so thet it  doesen't come back when we search from the array
         allNotes.remove(at: indexForNote(id: id, in: allNotes).row)
     }
+}
+
+//MARK: - NSFetchedResultsController Delegates
+extension ListNotesViewController: NSFetchedResultsControllerDelegate {
+    
 }
