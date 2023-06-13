@@ -12,7 +12,7 @@ class EditNoteViewController: UIViewController {
     static let identifire = "EditNoteViewController"
     
     var note: Note!
-    weak var delegate: ListNotesDelegate?
+    
     
     @IBOutlet weak var textView: UITextView!
 
@@ -34,11 +34,9 @@ class EditNoteViewController: UIViewController {
     func updateNote() {
         note.lastUpdated = Date()
         CoreDataManager.shered.save()
-        delegate?.refreshNoes()
     }
     
     func deleteNote() {
-        delegate?.deleteNote(with: note.id)
         CoreDataManager.shered.deleteNote(note)
     }
     
